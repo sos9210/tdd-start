@@ -38,7 +38,7 @@ public class PasswordStrengthMeterTest {
 
     @Test
     void meetsOtherCriteria_except_for_number_Then_Normal() {
-        assertStrength("ab!@AZ", PasswordStrength.NORMAL);
+        assertStrength("ab!@ABqwer", PasswordStrength.NORMAL);
     }
 
     @Test
@@ -58,6 +58,20 @@ public class PasswordStrengthMeterTest {
     @Test
     void meetsOnlyLengthCriteria_Then_Weak() {
         assertStrength("abdefghi", PasswordStrength.WEAK);
+    }
+
+    @Test
+    void meetsOnlyNumCriteria_Then_Weak() {
+        assertStrength("12345", PasswordStrength.WEAK);
+    }
+    @Test
+    void meetsOnlyUpperCriteria_Then_Weak() {
+        assertStrength("ABZEF", PasswordStrength.WEAK);
+    }
+
+    @Test
+    void meetsNoCriteria_Then_Weak() {
+        assertStrength("abc",PasswordStrength.WEAK);
     }
 }
 
