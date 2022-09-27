@@ -1,4 +1,4 @@
-package chap07;
+package chap07.autodebit;
 
 public interface AutoDebitInfoRepository {
     void save(AutoDebitInfo info);

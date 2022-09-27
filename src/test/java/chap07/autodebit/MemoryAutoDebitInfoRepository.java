@@ -1,4 +1,4 @@
-package chap07;
+package chap07.autodebit;
 
 import java.util.HashMap;
 import java.util.Map;

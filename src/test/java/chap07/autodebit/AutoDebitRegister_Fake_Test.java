@@ -1,11 +1,11 @@
-package chap07;
+package chap07.autodebit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AutoDebitRegister_Fake_Test {
 
@@ -22,7 +22,7 @@ public class AutoDebitRegister_Fake_Test {
 
     @Test
     void alreadyRegistered_InfoUpdated() {
-        repository.save(new AutoDebitInfo("user1","1111222233334444"), LocalDateTime.now());
+        repository.save(new AutoDebitInfo("user1","1111222233334444", LocalDateTime.now()));
 
         AutoDebitReq req = new AutoDebitReq("user1", "123456789012");
         RegisterResult result = this.register.register(req);
