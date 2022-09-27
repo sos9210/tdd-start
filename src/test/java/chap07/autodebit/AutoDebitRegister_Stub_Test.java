@@ -1,15 +1,15 @@
-package chap07;
+package chap07.autodebit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static chap07.CardValidity.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static chap07.autodebit.CardValidity.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AutoDebitRegister_Stub_Test {
     private AutoDebitRegister register;
     private StubCardNumberValidator stubValidator;
-    private StubAutoDebitInfRepsitory stubRepository;
+    private StubAutoDebitInfoRepository stubRepository;
 
     @BeforeEach
     void setUp() {

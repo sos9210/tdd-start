@@ -1,4 +1,4 @@
-package chap07;
+package chap07.autodebit;
 
 public class StubCardNumberValidator extends CardNumberValidator{
     private String invalidNo;
@@ -7,7 +7,7 @@ public class StubCardNumberValidator extends CardNumberValidator{
     public void setInvalidNo(String invalidNo) {
         this.invalidNo = invalidNo;
     }
-    public void setTheftNo(String theftNo) {]
+    public void setTheftNo(String theftNo) {
         this.theftNo = theftNo;
     }
 
